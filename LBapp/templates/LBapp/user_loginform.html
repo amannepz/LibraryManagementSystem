@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>admin_loginform</title>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body id="userbg" style="background-image:url('{% static 'images/userbgm.jpg'%}');">
+  <center id="center">
+    <div id="usercontent">
+      <div id="heading">
+        <h2>Login</h2>
+      </div>
+      <form method="post">
+        {% csrf_token %}
+        <div id="userusername">
+          <label>Username</label>
+          <input id="textbox" type="text" name="username" required>
+        </div>
+        <div id="userpassword">
+          <label>Password</label>
+          <input id="textbox" type="password" name="password" required>
+        </div>
+        <div id="usersubmit">
+          <input id="submitbutton" type="submit" value="Login">
+        </div>
+      </form>
+      {{error}}
+    </div>
+  </center>
+</body>
+</html>

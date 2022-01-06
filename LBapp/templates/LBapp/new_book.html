@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Add New Book</title>
+  <link rel="stylesheet" href="{% static 'css/librarystyle.css' %}">
+</head>
+<body>
+  <div id="header">
+    <h1>Library Management System</h1>
+    <div id="nav">
+      <h2>Add New Book</h2>
+      <a href="/LBapp/view-book">View Book Details</a>
+      <a href="/LBapp/search-book">Search Books</a>
+      <a href="/LBapp/view-book">Issue Book</a>
+      <a href="/LBapp/show-detail">Return Book</a>
+      <a href="/LBapp/show-detail">Issued Book Details</a>
+      <!--<a href="/LBapp/display-detail">Return Book Details</a>-->
+      <a href="/LBapp/logout">Logout</a>
+    </div>
+  </div>
+
+  <div id="main">
+    <form action="/LBapp/add" method="post">
+      {% csrf_token %}
+      <div id="f">
+        <table>
+          {{form}}
+        </table>
+        <input id="btn"class="btn"type="submit" value="Add">
+      </div>
+        
+    </form>
+  </div>
+</body>
+</html>

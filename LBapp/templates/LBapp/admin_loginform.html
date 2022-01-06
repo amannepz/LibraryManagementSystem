@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>admin_loginform</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  </head>
+  <body id="bg" style="background-image:url('{% static 'images/userbgm.jpg'%}');">
+    <center id="center">
+      <div id="content">
+      <div id="heading">
+        <h3>Login</h3>
+      </div>
+      <form id="form"action="" method="post">
+        <div id="username">
+          <label>Username</label>
+          <input id="textbox" type="text" name="username" value=""required>
+        </div>
+        <div id="password">
+          <label>Password</label>
+          <input id="textbox" type="password" name="" value=""required>
+        </div>
+        <div id="submit">
+          <input id="submitbutton" type="submit" name="" value="Login">
+        </div>
+      </form>
+    </div>
+  </center>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Issue Book</title>
+    <link rel="stylesheet" href="{% static 'css/librarystyle.css' %}">
+  </head>
+  <body>
+    <div id="header">
+      <h1>Library Management System</h1>
+      <div id="nav">
+        <a href="/LBapp/add-book">Add NewBook</a>
+        <a href="/LBapp/view-book">View BookDetails</a>
+        <a href="/LBapp/search-book">Search Books</a>
+        <a href="/LBapp/issue-book">Issue Book</a>
+        <a href="/LBapp/show-detail">Issued Book Details</a>
+        <a href="/LBapp/logout">LogOut</a>
+      </div>
+    </div>
+
+    <div id="main">
+      <h2>Edit Issued Book Details</h2>
+      <form action="/LBapp/update-issue" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="sid" value="{{obj.id}}">
+        {{form}}
+        <input type="submit" value="Update">
+      </form>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Or Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  </head>
+  <body id="bg" style="background-image:url('{% static 'images/backgroundchoose.jfif' %}');">
+    <div id="allcontent">
+    <div id="heading">
+      <h1>{{message}}</h1>
+    </div>
+    <a href="LBapp/login">
+    <img src="{% static 'images/admin.jpg' %}" alt="admin" height="250px" width="250px"style="margin-top: 50px;margin-left:200px">
+    </a>
+    <a href="LBapp/login">
+    <img src="{% static 'images/user.jpg' %}" alt="user" height="250px" width="250px"style="margin-top: 50px;margin-left:400px">
+    </a>
+    <div id="button">
+      <a id="admin"href="LBapp/login">Log In as Admin</a>
+      <a id="user"href="LBapp/login">Log In as User</a>
+    </div>
+  </div>
+  </body>
+</html>

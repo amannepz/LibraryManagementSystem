@@ -1,0 +1,80 @@
+#heading h3{
+  color: darkblue;
+  padding: 5px;
+  font-size: 50px;
+}
+#content{
+  margin-top: 200px;
+}
+#username,#password,#submit{
+  font-size: 30px;
+  color: black;
+  padding-bottom: 25px;
+  text-shadow: 1px 1px black;
+}
+#userusername,#userpassword{
+  font-size: 30px;
+  color: black;
+  padding-bottom: 25px;
+  text-shadow: 1px 1px black;
+}
+#usercontent{
+  margin-top: 150px;
+}
+
+#textbox{
+  height: 30px;
+  border-radius: 5px;
+}
+#submitbutton{
+  height:42px;
+  width: 200px;
+  font-size: 30px;
+  margin-left: 135px;
+  border-radius: 5px;
+  background-color: gray;
+  color:black;
+}
+#submitbutton:hover{
+  background-color: black;
+  color:white;
+}
+#submit{
+  font-size: 50px;
+}
+#center{
+  margin: 200px;
+}
+#bg{
+  background-repeat: none;
+  background-size: cover;
+}
+#heading h1{
+  display: table;
+  background-color:#16b9de;
+  text-align: center;
+  color:white;
+  margin-left: 400px;
+}
+#button{
+  margin-top: 0px;
+}
+#admin{
+  background-color:yellow; /* Yellow */
+  border:solid 2px #329A97; /* Teal Green */
+  font-size:20px;
+  text-decoration:none;
+  color:blue;
+  padding:5px 65px 5px 48px;
+  margin-left: 200px;
+}
+#user{
+  background-color:green; /* Yellow */
+  width:150px;
+  border:solid 2px #329A97; /* Teal Green */
+  font-size:20px;
+  text-decoration:none;
+  color:white;
+  padding:5px 80px 5px 50px;
+  margin-left: 398px;
+}

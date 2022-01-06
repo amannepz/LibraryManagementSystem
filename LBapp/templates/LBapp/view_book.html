@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>View Books Details</title>
+    <link rel="stylesheet" href="{% static 'css/librarystyle.css' %}">
+  </head>
+  <body>
+    <div id="header">
+      <h1>Library Management System</h1>
+    <div id="nav">
+      <h2 id="h2">View Book Details</h2>
+      <a href="/LBapp/add-book">Add NewBook</a>
+      <a href="/LBapp/search-book">Search Books</a>
+      <a href="/LBapp/show-detail">Return Book</a>
+      <a href="/LBapp/show-detail">Issued Book Details</a>
+      <!-- <a href="/LBapp/display-detail">Return Book Details</a> -->
+      <a href="/LBapp/logout">Logout</a>
+      </div>
+    </div>
+    <div id="main">
+      <table>
+        <thead>
+          <th>Book Name</th>
+          <th>Book No</th>
+          <th>Author</th>
+          <th>Date</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </thead>
+        {% for book in books %}
+        <tr>
+          <td>{{book.name}}</td>
+          <td>{{book.booknumber}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.date}}</td>
+          <td>{{book.price}}</td>
+          <td>{{book.quantity}}</td>
+          <td id="editdelete"><a class="btn"href="/LBapp/edit-book?bookid={{book.id}}">Edit</a></td>
+          <td id="editdelete"><a class="btn"href="/LBapp/delete-book?bookid={{book.id}}">Delete</a></td>
+          <td id="editdelete"><a class="btn"href="/LBapp/issue-book?bookid={{book.id}}">Issue-Book</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>
